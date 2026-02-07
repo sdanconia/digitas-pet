@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-// import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { 
@@ -25,8 +25,7 @@ export function Navigation({ user }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  // const { signOut } = useAuth()
-  const signOut = async () => console.log('signOut placeholder')
+  const { signOut } = useAuth()
 
   const handleSignOut = async () => {
     try {
