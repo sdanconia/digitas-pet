@@ -2,16 +2,16 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { 
-  PawPrint, 
-  BarChart3, 
-  Settings, 
-  LogOut, 
-  Menu, 
+import {
+  BarChart3,
+  Settings,
+  LogOut,
+  Menu,
   X,
   CreditCard,
   Watch
@@ -50,7 +50,7 @@ export function Navigation({ user }: NavigationProps) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href={user ? "/dashboard" : "/"} className="flex items-center space-x-2">
-            <PawPrint className="w-8 h-8 text-cyan-400" />
+            <Image src="/logo.jpg" alt="Digitas.Pet" width={32} height={32} className="w-8 h-8 rounded-md object-cover" />
             <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Digitas.Pet
             </span>

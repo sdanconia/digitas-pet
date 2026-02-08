@@ -18,6 +18,13 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Light theme colors
+        'pastel-pink': '#FFE4E6',
+        'pastel-blue': '#E0F2FE',
+        'pastel-purple': '#F3E8FF',
+        'pastel-green': '#ECFDF5',
+        'pastel-yellow': '#FEFCE8',
+        'soft-gray': '#F8FAFC',
         cyan: {
           50: '#ecfeff',
           100: '#cffafe',

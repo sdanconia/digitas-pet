@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   title: "Digitas.Pet - Your Pet's Digital Twin",
   description: "Track your pet's health with a beautiful 3D digital twin and comprehensive wellness dashboard. The future of pet care is here.",
   keywords: ["pet health", "digital twin", "pet tracking", "wellness", "3D pet"],
+  icons: {
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Digitas.Pet - Your Pet's Digital Twin",
     description: "Track your pet's health with a beautiful 3D digital twin and comprehensive wellness dashboard.",
