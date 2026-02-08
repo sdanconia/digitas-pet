@@ -41,8 +41,8 @@ export function useAuth() {
 
     // Create user profile
     if (data.user) {
-      const { error: profileError } = await supabase
-        .from('users')
+      const { error: profileError } = await (supabase
+        .from('users') as any)
         .insert({
           id: data.user.id,
           email: data.user.email!,
@@ -53,8 +53,8 @@ export function useAuth() {
       if (profileError) throw profileError
 
       // Create default subscription
-      const { error: subscriptionError } = await supabase
-        .from('subscriptions')
+      const { error: subscriptionError } = await (supabase
+        .from('subscriptions') as any)
         .insert({
           user_id: data.user.id,
           plan: 'free',

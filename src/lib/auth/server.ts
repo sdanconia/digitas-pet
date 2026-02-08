@@ -46,6 +46,6 @@ export async function getUserSubscription(userId: string) {
 }
 
 export async function getUserPlan(userId: string) {
-  const subscription = await getUserSubscription(userId)
+  const subscription = await getUserSubscription(userId) as any
   return subscription?.plan || 'free'
 }

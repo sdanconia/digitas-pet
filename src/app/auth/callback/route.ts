@@ -30,8 +30,8 @@ export async function GET(request: NextRequest) {
         const provider = data.user.app_metadata?.provider || 'email'
 
         // Use admin client to bypass RLS for initial user creation
-        const { error: profileError } = await supabaseAdmin
-          .from('users')
+        const { error: profileError } = await (supabaseAdmin
+          .from('users') as any)
           .insert({
             id: data.user.id,
             email: data.user.email!,
@@ -45,8 +45,8 @@ export async function GET(request: NextRequest) {
         }
 
         // Create default subscription
-        const { error: subscriptionError } = await supabaseAdmin
-          .from('subscriptions')
+        const { error: subscriptionError } = await (supabaseAdmin
+          .from('subscriptions') as any)
           .insert({
             user_id: data.user.id,
             plan: 'free',

@@ -128,7 +128,7 @@ function CuteCat({ position = [0, 0, 0], scale = 1 }: { position?: [number, numb
         <meshStandardMaterial color="#000000" />
       </Sphere>
       
-      {/* Nose */
+      {/* Nose */}
       <Cylinder args={[0.02, 0.02, 0.01]} position={[0, 0.22, 0.23]} rotation={[Math.PI / 2, 0, 0]}>
         <meshStandardMaterial color="#FF1493" />
       </Cylinder>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { BreathingGlow } from "@/components/effects/BreathingGlow";
 import "./globals.css";
 
 const inter = Inter({
@@ -47,10 +48,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased bg-slate-900 text-white font-sans`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased bg-white text-gray-900 font-sans`}
       >
+        <BreathingGlow />
         {children}
       </body>
     </html>
